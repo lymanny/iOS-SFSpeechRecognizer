@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FoodVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="FoodVC" customModule="SFSpeechRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-Cy-JTY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodCell" id="Pov-OP-qOp" customClass="FoodCell" customModule="SFSpeechRecognizer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pov-OP-qOp" id="OWM-Ah-nYZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-zw-Hvo">
+                                                    <rect key="frame" x="110" y="20" width="56" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.5$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpj-C4-0yu">
+                                                    <rect key="frame" x="110" y="46" width="33" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-jn-Fxb">
+                                                    <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="ULf-2n-eGK"/>
+                                                        <constraint firstAttribute="width" constant="80" id="lrf-jc-CmP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pNk-jn-Fxb" firstAttribute="top" secondItem="OWM-Ah-nYZ" secondAttribute="top" constant="20" id="Yfh-MA-GfR"/>
+                                                <constraint firstItem="RXZ-zw-Hvo" firstAttribute="top" secondItem="pNk-jn-Fxb" secondAttribute="top" id="cO4-kQ-acf"/>
+                                                <constraint firstItem="Vpj-C4-0yu" firstAttribute="leading" secondItem="RXZ-zw-Hvo" secondAttribute="leading" id="h4X-Ob-wqo"/>
+                                                <constraint firstItem="Vpj-C4-0yu" firstAttribute="top" secondItem="RXZ-zw-Hvo" secondAttribute="bottom" constant="5" id="oB9-NZ-62M"/>
+                                                <constraint firstAttribute="bottom" secondItem="pNk-jn-Fxb" secondAttribute="bottom" constant="20" id="tRj-Qx-5fT"/>
+                                                <constraint firstItem="RXZ-zw-Hvo" firstAttribute="leading" secondItem="pNk-jn-Fxb" secondAttribute="trailing" constant="10" id="vfE-oC-NIs"/>
+                                                <constraint firstItem="pNk-jn-Fxb" firstAttribute="leading" secondItem="OWM-Ah-nYZ" secondAttribute="leading" constant="20" id="xBN-XB-Gy4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageFood" destination="pNk-jn-Fxb" id="MPO-f7-9GG"/>
+                                            <outlet property="labelPrice" destination="Vpj-C4-0yu" id="y2A-fS-XBJ"/>
+                                            <outlet property="labelTitle" destination="RXZ-zw-Hvo" id="xDY-8d-CgB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoDataCell" id="oQ1-Sh-5wT" customClass="NoDataCell" customModule="SFSpeechRecognizer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="170" width="393" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oQ1-Sh-5wT" id="hXQ-nL-UUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-To-cTd">
+                                                    <rect key="frame" x="165.66666666666666" y="17.666666666666668" width="62" height="21.000000000000004"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q6K-To-cTd" firstAttribute="centerY" secondItem="hXQ-nL-UUQ" secondAttribute="centerY" id="6aZ-D2-hAH"/>
+                                                <constraint firstItem="Q6K-To-cTd" firstAttribute="centerX" secondItem="hXQ-nL-UUQ" secondAttribute="centerX" id="E72-Hd-b1Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="enV-hw-Nyp"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Egm-qp-qUZ"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ads-em-qix">
+                                <rect key="frame" x="328" y="767" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="m2C-mj-WMs"/>
+                                    <constraint firstAttribute="height" constant="45" id="n25-8z-hJ9"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="audio"/>
+                                <connections>
+                                    <action selector="voiceClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0pf-HR-zal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ads-em-qix" secondAttribute="trailing" constant="20" id="2TH-hB-tbJ"/>
+                            <constraint firstAttribute="bottom" secondItem="ads-em-qix" secondAttribute="bottom" constant="40" id="4jU-Bi-s3b"/>
+                            <constraint firstItem="h3a-Cy-JTY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bHg-5e-B0p"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h3a-Cy-JTY" secondAttribute="trailing" id="fGh-vN-voG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="h3a-Cy-JTY" secondAttribute="bottom" id="iMO-qD-4eu"/>
+                            <constraint firstItem="h3a-Cy-JTY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pXe-O9-eae"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="h3a-Cy-JTY" id="4As-JB-m9R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="audio" width="512" height="512"/>
+        <image name="burger" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

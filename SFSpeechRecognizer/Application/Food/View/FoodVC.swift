@@ -24,12 +24,14 @@ class FoodVC: UIViewController {
     
     //MARK: - @IBAction
     @IBAction func voiceClick(_ sender: Any) {
-        if let voiceSearchVC = UIStoryboard(name: "VoiceSearchSB", bundle: nil).instantiateViewController(withIdentifier: "VoiceSearchVC") as? VoiceSearchVC {
-            voiceSearchVC.onRecognitionComplete = { recognizedText in
-                self.foodVM.search(query: recognizedText)
-                self.tableView.reloadData()
+        addFeedbackGenerator {
+            if let voiceSearchVC = UIStoryboard(name: "VoiceSearchSB", bundle: nil).instantiateViewController(withIdentifier: "VoiceSearchVC") as? VoiceSearchVC {
+                voiceSearchVC.onRecognitionComplete = { recognizedText in
+                    self.foodVM.search(query: recognizedText)
+                    self.tableView.reloadData()
+                }
+                self.present(voiceSearchVC, animated: true)
             }
-            present(voiceSearchVC, animated: true)
         }
     }
     

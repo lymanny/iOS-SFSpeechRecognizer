@@ -48,17 +48,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ty-pU-8EO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG4-yk-iIT">
                                 <rect key="frame" x="333" y="758" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="HS8-0b-wew"/>
-                                    <constraint firstAttribute="height" constant="40" id="Ygo-Ky-b9i"/>
+                                    <constraint firstAttribute="height" constant="40" id="54a-Lr-YCm"/>
+                                    <constraint firstAttribute="width" constant="40" id="cvh-GD-xJV"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="search"/>
                                 <connections>
-                                    <action selector="searchClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vMV-Ik-3O8"/>
+                                    <action selector="searchClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WB5-Ne-r0U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,11 +70,11 @@
                             <constraint firstItem="HQH-Yq-uoY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="DSN-W4-izb"/>
                             <constraint firstItem="HQH-Yq-uoY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="P6g-hW-qt8"/>
                             <constraint firstItem="skl-9u-YfQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="V8D-ag-1AF"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9ty-pU-8EO" secondAttribute="trailing" constant="20" id="YN4-55-TJd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9ty-pU-8EO" secondAttribute="bottom" constant="20" id="ctr-Mt-FWm"/>
+                            <constraint firstItem="xG4-yk-iIT" firstAttribute="centerY" secondItem="Pot-aY-rwy" secondAttribute="centerY" id="bFx-N5-PGR"/>
                             <constraint firstItem="Pot-aY-rwy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="gJl-S4-ABb"/>
                             <constraint firstItem="skl-9u-YfQ" firstAttribute="top" secondItem="HQH-Yq-uoY" secondAttribute="bottom" constant="20" id="nPH-7n-miW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Pot-aY-rwy" secondAttribute="bottom" constant="20" id="nc3-lh-qjr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xG4-yk-iIT" secondAttribute="trailing" constant="20" id="oM7-Pw-aJz"/>
                         </constraints>
                     </view>
                     <connections>

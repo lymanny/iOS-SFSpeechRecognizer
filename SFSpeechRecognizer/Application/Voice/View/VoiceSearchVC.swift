@@ -32,15 +32,19 @@ class VoiceSearchVC: UIViewController, SFSpeechRecognizerDelegate {
     
     //MARK: - @IBAction
     @IBAction func closeClick(_ sender: Any) {
-        stopListening()
-        self.dismiss(animated: true, completion: nil)
+        addFeedbackGenerator {
+            self.stopListening()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func searchClick(_ sender: Any) {
-        self.dismiss(animated: true) {
-            self.onRecognitionComplete?(self.textViewVoiceDisplay.text)
+        addFeedbackGenerator {
+            self.stopListening()
+            self.dismiss(animated: true) {
+                self.onRecognitionComplete?(self.textViewVoiceDisplay.text)
+            }
         }
-        
     }
     
     //MARK: - Function
